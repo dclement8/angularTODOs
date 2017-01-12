@@ -1,0 +1,15 @@
+Liste des tâches :
+----------------------
+
+[X] GET /lists (CP)
+[O] POST /lists (CP)
+[O] GET /lists/:id (CP)
+[ ] PUT /lists/:id ()
+[ ] DELETE /lists/:id ()
+[ ] GET /lists/:list_id/todos ()
+[ ] POST /lists/:list_id/todos ()
+[ ] GET /lists/:list_id/todos/:id ()
+[ ] PUT /lists/:list_id/todos/:id ()
+[ ] DELETE /lists/:list_id/todos/:id ()
+[ ] PUT /lists/:list_id/todos/:id/done ()
+[ ] PUT /lists/:list_id/todos/:id/undone ()
