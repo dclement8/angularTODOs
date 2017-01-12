@@ -4,7 +4,8 @@ angular.module("liste").service("Liste",
 		{
 			var Liste = function(data)
 			{
-				
+				this.id = data.id;
+				this.label = data.label;
 			}
 			
 			return Liste;
