@@ -17,10 +17,40 @@
 	</head>
 	<body ng-app="liste">
 		<h1>TODOS</h1>
-		<ul id="liste" ng-controller="ListeController">
-			<li ng-repeat="lister in tab">
-				<lister>
-			</li>
+		<div id="MainboxItem">
+			<h2 class="titre">Liste des tâches</h2>
+			<ul class="liste" ng-controller="ListeController">
+				<li class="MainItem" ng-repeat="lister in tab">
+					<lister>
+				</li>
+			</ul>
+
+			<div class="toolbox">
+				<div class="create">
+
+				</div>
+
+				<div class="del">
+
+				</div>
+			</div>
+		</div>
+
+		<div id="boxItem">
+			<h2 class="titre">Tâches</h2>
+			<ul class="taches">
+
+			</ul>
+
+			<div class="toolbox">
+				<div class="create">
+
+				</div>
+
+				<div class="del">
+
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
