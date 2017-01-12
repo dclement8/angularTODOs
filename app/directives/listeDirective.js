@@ -7,7 +7,7 @@ angular.module("liste")
 			{
 				scope.show = function()
 				{
-					//scope.product.buy();
+					scope.lister.show();
 				}
 			}
 		};
