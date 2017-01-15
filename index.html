@@ -7,9 +7,12 @@
 		<script src="lib/jquery.min.js"></script>
 		<script src="lib/angular.min.js"></script>
 		<script src="app/app.js"></script>
-		<script src="app/control/listeController.js"></script>
 		<script src="app/models/liste.js"></script>
+		<script src="app/control/listeController.js"></script>
 		<script src="app/directives/listeDirective.js"></script>
+		<script src="app/models/tache.js"></script>
+		<script src="app/control/tacheController.js"></script>
+		<script src="app/directives/tacheDirective.js"></script>
 		
 		<!--
 		<link rel="stylesheet" href="style.css">-->
@@ -26,25 +29,18 @@
 					<lister id="l-{{lister.id}}">
 				</li>
 			</ul>
-			
-			<!--<div ng-include="'app/templates/creerlisteTemplate'"></div>-->
 		</div>
 
-		<div id="boxItem">
+		<div id="boxItem" ng-controller="TacheController">
 			<h2 class="titre">Tâches</h2>
-			<ul class="taches">
-
-			</ul>
-
-			<div class="toolbox">
-				<div class="create">
-
-				</div>
-
-				<div class="del">
-
-				</div>
+			<div>
+				<input type="text" id="tache-createbox" /> <button ng-click="createTask()">Créer une tâche</button>
 			</div>
+			<ul id="listeTaches" class="taches">
+				<li class="MainItem" ng-repeat="task in thisListe.todos track by $index">
+					<task id="l-{{task.id}}">
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>

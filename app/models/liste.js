@@ -1,6 +1,6 @@
 angular.module("liste").service("Liste",
-	["$http",
-		function($http)
+	["$http", "Tache", 
+		function($http, Tache)
 		{
 			var Liste = function(data)
 			{
@@ -11,12 +11,19 @@ angular.module("liste").service("Liste",
 			
 			Liste.prototype.show = function()
 			{
+				var tasks = [];
+				
 				$http.get("http://todos.api.netlor.fr/lists/" + this.id + "/todos", { headers : {'Authorization' : 'Token token=0cbd83dabea346dab268bf13ce476ae1'} }).then(function(response)
 				{
 					response.data.forEach(function(data)
 					{
-						
+						var newTache = new Tache(data);
+						tasks.push(newTache);
 					});
+					
+					this.todos = tasks;
+					thisListe = this;
+					
 				},function(error)
 				{
 					console.log(error);
@@ -35,19 +42,6 @@ angular.module("liste").service("Liste",
 				
 				this.label = document.getElementById("liste-" + this.id).value;
 			}
-			
-			/*Liste.prototype.suppr = function()
-			{
-				$http.delete("http://todos.api.netlor.fr/lists/" + this.id ,{ headers : {'Authorization' : 'Token token=0cbd83dabea346dab268bf13ce476ae1'} }).then(function(response)
-				{
-					
-				},function(error)
-				{
-					console.log(error);
-				});
-				
-				$("#l-" + this.id).parent().remove();
-			}*/
 			
 			return Liste;
 		}

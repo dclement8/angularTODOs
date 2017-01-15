@@ -12,11 +12,7 @@ angular.module("liste")
 				scope.modif = function()
 				{
 					scope.lister.modif();
-				}/*,
-				scope.suppr = function()
-				{
-					scope.lister.suppr();
-				}*/
+				}
 			}
 		};
 	}
