@@ -1,1 +1,6 @@
 <button ng-click="show()">{{lister.label}}</button>
+<button onclick="$(this).next().toggle()">↓</button>
+<div class="liste-para" style="display:none;">
+	<input type="text" id="liste-{{lister.id}}" value="{{lister.label}}" /> <button ng-click="modif()">Modifier</button>
+	<button ng-click="suppr()">Supprimer</button>
+</div>

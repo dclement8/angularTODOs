@@ -10,28 +10,24 @@
 		<script src="app/control/listeController.js"></script>
 		<script src="app/models/liste.js"></script>
 		<script src="app/directives/listeDirective.js"></script>
+		
 		<!--
 		<link rel="stylesheet" href="style.css">-->
 	</head>
 	<body ng-app="liste">
 		<h1>TODOS</h1>
-		<div id="MainboxItem">
+		<div id="MainboxItem" ng-controller="ListeController">
 			<h2 class="titre">Liste des tâches</h2>
-			<ul class="liste" ng-controller="ListeController">
-				<li class="MainItem" ng-repeat="lister in tab">
-					<lister>
+			<div>
+				<input type="text" id="liste-createbox" /> <button ng-click="create()">Créer la liste</button>
+			</div>
+			<ul id="listeListe" class="liste">
+				<li class="MainItem" ng-repeat="lister in tab track by $index">
+					<lister id="l-{{lister.id}}">
 				</li>
 			</ul>
-
-			<div class="toolbox">
-				<div class="create">
-
-				</div>
-
-				<div class="del">
-
-				</div>
-			</div>
+			
+			<!--<div ng-include="'app/templates/creerlisteTemplate'"></div>-->
 		</div>
 
 		<div id="boxItem">
