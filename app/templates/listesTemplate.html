@@ -1,6 +1,7 @@
-<button ng-click="show()">{{lister.label}}</button>
-<button onclick="$(this).next().toggle()">↓</button>
-<div class="liste-para" style="display:none;">
-	<input type="text" id="liste-{{lister.id}}" value="{{lister.label}}" /> <button ng-click="modif()">Modifier</button>
-	<button ng-click="suppr()">Supprimer</button>
+<button class="btn btn-todos" ng-click="show()">{{lister.label}}</button>
+<button class="btn btn-primary" onclick="$(this).next().toggle()">↓</button>
+<div class="liste-para form-inline" style="display:none;margin-top:5px">
+	<input type="text" class="form-control" id="liste-{{lister.id}}" value="{{lister.label}}" />
+	<button ng-click="modif()" class="btn btn-primary">Modifier</button>
+	<button ng-click="suppr()" class="btn btn-danger">Supprimer</button>
 </div>

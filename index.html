@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>TD Angular</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/todos.css" rel="stylesheet">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -18,28 +19,32 @@
 	</head>
 	<body ng-app="liste">
 		<h1>TODOS</h1>
-		<div id="MainboxItem" ng-controller="ListeController">
-			<h2 class="titre">Liste des tâches</h2>
-			<div>
-				<input type="text" id="liste-createbox" /> <button ng-click="create()">Créer la liste</button>
-			</div>
-			<ul id="listeListe" class="liste">
-				<li class="MainItem" ng-repeat="lister in tab track by $index">
-					<lister id="l-{{lister.id}}">
-				</li>
-			</ul>
-		</div>
+		<div id="container">
+			<div class="row">
+				<div id="MainboxItem" class="col-sm-4 col-md-4" ng-controller="ListeController">
+					<h2 class="titre">Liste des tâches</h2>
+					<div class="form-inline">
+						<input type="text" placeholder="Nom de la liste" class="form-control" id="liste-createbox" /> <button class="btn btn-primary" ng-click="create()">Créer la liste</button>
+					</div>
+					<ul id="listeListe" class="liste">
+						<li class="MainItem" ng-repeat="lister in tab track by $index">
+							<lister id="l-{{lister.id}}">
+						</li>
+					</ul>
+				</div>
 
-		<div id="boxItem" ng-controller="TacheController">
-			<h2 class="titre">Tâches</h2>
-			<div>
-				<input type="text" id="tache-createbox" /> <button ng-click="createTask()">Créer une tâche</button>
+				<div id="boxItem" class="col-sm-8 col-md-8" ng-controller="TacheController">
+					<h2 class="titre">Tâches</h2>
+					<div class="form-inline">
+						<input type="text" placeholder="Nom de la tâche" class="form-control" id="tache-createbox" /> <button class="btn btn-primary" ng-click="createTask()">Créer une tâche</button>
+					</div>
+					<ul id="listeTaches" class="taches">
+						<li class="MainItem" ng-repeat="task in thisListe.todos track by $index">
+							<task id="l-{{task.id}}">
+						</li>
+					</ul>
+				</div>
 			</div>
-			<ul id="listeTaches" class="taches">
-				<li class="MainItem" ng-repeat="task in thisListe.todos track by $index">
-					<task id="l-{{task.id}}">
-				</li>
-			</ul>
 		</div>
 		<script src="lib/jquery.min.js"></script>
 		<script src="lib/angular.min.js"></script>
