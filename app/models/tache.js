@@ -43,6 +43,7 @@ angular.module("liste").service("Tache",
 			{
 				$http.put("http://todos.api.netlor.fr/lists/" + this.liste + "/todos/" + this.id , '{"text": "' + document.getElementById("tache-" + this.id).value + '"}' ,{ headers : {'Authorization' : 'Token token=0cbd83dabea346dab268bf13ce476ae1'} }).then(function(response)
 				{
+
 				},function(error)
 				{
 					console.log(error);
