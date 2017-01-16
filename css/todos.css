@@ -3,6 +3,15 @@ body {
 	min-width: 300px;
 }
 
+h1
+{
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 #container {
 	position: absolute;
 	top: 6rem;
@@ -22,10 +31,19 @@ body {
    border: 1px solid grey;
    min-height: 100%;
    overflow: auto;
+   flex-direction: column;
+   display: flex;
+   height: 100%;
 }
 
-#MainboxItem div , #boxItem div {
+#MainboxItem > div {
    margin-bottom: 5px;
+   display: flex;
+   flex-direction: row;
+}
+
+#MainboxItem > div > * {
+   margin-right: 5px;
 }
 
 #listeListe, #listeTaches {
@@ -35,6 +53,8 @@ body {
 	border-top-color:grey;
 	border-top-style:solid;
 	border-top-width:1px;
+	overflow:auto;
+	height:100ex;
 }
 
 #listeListe li {
@@ -45,6 +65,39 @@ body {
 #listeTaches li {
 	width: 100%;
 	margin-top: 5px;
+}
+
+#boxItem > div 
+{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5px;
+}
+
+#boxItem > div > button
+{
+	margin-left: 5px;
+}
+
+lister > div
+{
+	display: flex;
+	flex-direction: row;
+}
+
+lister > div > button
+{
+	margin-left:5px;
+}
+
+lister > button:first-of-type
+{
+	margin-right:5px;
+}
+
+task > div > button
+{
+	margin-left:5px;
 }
 
 input, button, textarea { max-width: 100%; }
