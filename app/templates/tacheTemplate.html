@@ -1,6 +1,7 @@
-<button ng-click="done()" id="task-{{task.id}}" class="fini-{{task.fini}}" >{{task.text}}</button>
-<button onclick="$(this).next().toggle()">↓</button>
-<div class="task-para" style="display:none;">
-	<input type="text" id="tache-{{task.id}}" value="{{task.text}}" /> <button ng-click="modifTask()">Modifier</button>
-	<button ng-click="supprTask()">Supprimer</button>
+<button ng-click="done()" id="task-{{task.id}}" class="fini-{{task.fini}} btn" >{{task.text}}</button>
+<button class="btn btn-primary" onclick="$(this).next().toggle()">↓</button>
+<div class="task-para form-inline" style="display:none;margin-top:5px">
+	<input type="text" class="form-control" id="tache-{{task.id}}" value="{{task.text}}" />
+	<button ng-click="modifTask()" class="btn btn-primary">Modifier</button>
+	<button ng-click="supprTask()" class="btn btn-danger">Supprimer</button>
 </div>

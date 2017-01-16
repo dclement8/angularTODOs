@@ -35,6 +35,11 @@ body {
 	margin-top: 5px;
 }
 
+#listeTaches li {
+	width: 100%;
+	margin-top: 5px;
+}
+
 input, button, textarea { max-width: 100%; }
 
 .titre {
@@ -49,4 +54,32 @@ input, button, textarea { max-width: 100%; }
 
 .btn-todos {
 	width: 85%;
+}
+
+.fini-false
+{
+	color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.fini-false:hover
+{
+	color: #fff;
+	background-color: #c9302c;
+	border-color: #ac2925;
+}
+
+.fini-true
+{
+	color: #fff;
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+}
+
+.fini-true:hover
+{
+	color: #fff;
+	background-color: #449d44;
+	border-color: #398439;
 }
