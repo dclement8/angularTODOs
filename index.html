@@ -17,7 +17,7 @@
 		<!--
 		<link rel="stylesheet" href="style.css">-->
 	</head>
-	<body ng-app="liste">
+	<body ng-app="liste" ng-controller="ListeController">
 		<h1>TODOS</h1>
 		<div id="container">
 			<div class="row">
@@ -39,7 +39,7 @@
 						<input type="text" placeholder="Nom de la tâche" class="form-control" id="tache-createbox" /> <button class="btn btn-primary" ng-click="createTask()">Créer une tâche</button>
 					</div>
 					<ul id="listeTaches" class="taches">
-						<li class="MainItem" ng-repeat="task in thisListe.todos track by $index">
+						<li class="MainItem" ng-repeat="task in tabb track by $index">
 							<task id="l-{{task.id}}">
 						</li>
 					</ul>
@@ -53,7 +53,6 @@
 		<script src="app/control/listeController.js"></script>
 		<script src="app/directives/listeDirective.js"></script>
 		<script src="app/models/tache.js"></script>
-		<script src="app/control/tacheController.js"></script>
 		<script src="app/directives/tacheDirective.js"></script>
 	</body>
 </html>
