@@ -12,9 +12,6 @@ angular.module("liste").service("Tache",
 
 			Tache.prototype.done = function()
 			{
-				console.log("http://todos.api.netlor.fr/lists/" + this.liste + "/todos/" + this.id + "/done");
-				console.log(this.fini);
-
 				if(this.fini == false)
 				{
 					this.fini = true;
