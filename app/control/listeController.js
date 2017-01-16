@@ -24,7 +24,7 @@ angular.module("liste")
 			{
 				var newListe = new Liste(response.data);
 				$scope.tab.push(newListe);
-				
+				document.getElementById("liste-createbox").value = "";
 			},function(error)
 			{
 				console.log(error);
@@ -50,6 +50,9 @@ angular.module("liste")
 			}
 			
 			$scope.tab.splice(indice, 1);
+			
+			$scope.laListe = null;
+			$scope.tabb = [];
 		};
 		
 		$scope.show = function() {
