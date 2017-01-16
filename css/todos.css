@@ -1,0 +1,52 @@
+body {
+	background: yellow;
+	min-width: 300px;
+}
+
+#container {
+	position: absolute;
+	top: 6rem;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+}
+
+#container > .row {
+	width: 100%;
+	margin:0;
+	height: 100%;
+}
+
+#MainboxItem, #boxItem {
+   background: white;
+   border: 1px solid grey;
+   min-height: 100%;
+   overflow: auto;
+}
+
+#listeListe, #listeTaches {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#listeListe li {
+	width: 100%;
+	margin-top: 5px;
+}
+
+input, button, textarea { max-width: 100%; }
+
+.titre {
+	color: white;
+	background: black;
+	border: 2px solid red;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.btn-todos {
+	width: 85%;
+}
