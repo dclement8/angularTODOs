@@ -12,11 +12,15 @@ angular.module("liste").service("Tache",
 			
 			Tache.prototype.done = function()
 			{
+				console.log("http://todos.api.netlor.fr/lists/" + this.liste + "/todos/" + this.id + "/done");
+				console.log(this.fini);
+				
 				if(this.fini == false)
 				{
+					this.fini = true;
 					$http.put("http://todos.api.netlor.fr/lists/" + this.liste + "/todos/" + this.id + "/done", { headers : {'Authorization' : 'Token token=0cbd83dabea346dab268bf13ce476ae1'} }).then(function(response)
 					{
-						this.fini = true;
+						
 					},function(error)
 					{
 						console.log(error);
@@ -24,9 +28,10 @@ angular.module("liste").service("Tache",
 				}
 				else
 				{
+					this.fini = false;
 					$http.put("http://todos.api.netlor.fr/lists/" + this.liste + "/todos/" + this.id + "/undone", { headers : {'Authorization' : 'Token token=0cbd83dabea346dab268bf13ce476ae1'} }).then(function(response)
 					{
-						this.fini = false;
+						
 					},function(error)
 					{
 						console.log(error);
