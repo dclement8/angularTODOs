@@ -5,10 +5,10 @@ angular.module("liste")
 			templateUrl: "app/templates/listesTemplate.html",
 			link: function(scope, element, attrs)
 			{
-				scope.show = function()
+				/*scope.show = function()
 				{
 					scope.lister.show();
-				},
+				},*/
 				scope.modif = function()
 				{
 					scope.lister.modif();

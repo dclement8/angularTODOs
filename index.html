@@ -11,15 +11,14 @@
 		<script src="app/control/listeController.js"></script>
 		<script src="app/directives/listeDirective.js"></script>
 		<script src="app/models/tache.js"></script>
-		<script src="app/control/tacheController.js"></script>
 		<script src="app/directives/tacheDirective.js"></script>
 		
 		<!--
 		<link rel="stylesheet" href="style.css">-->
 	</head>
-	<body ng-app="liste">
+	<body ng-app="liste" ng-controller="ListeController">
 		<h1>TODOS</h1>
-		<div id="MainboxItem" ng-controller="ListeController">
+		<div id="MainboxItem">
 			<h2 class="titre">Liste des tâches</h2>
 			<div>
 				<input type="text" id="liste-createbox" /> <button ng-click="create()">Créer la liste</button>
@@ -31,13 +30,13 @@
 			</ul>
 		</div>
 
-		<div id="boxItem" ng-controller="TacheController">
+		<div id="boxItem">
 			<h2 class="titre">Tâches</h2>
 			<div>
 				<input type="text" id="tache-createbox" /> <button ng-click="createTask()">Créer une tâche</button>
 			</div>
-			<ul id="listeTaches" class="taches">
-				<li class="MainItem" ng-repeat="task in thisListe.todos track by $index">
+			<ul id="listeTaches" class="task">
+				<li class="MainItem" ng-repeat="task in tabb track by $index">
 					<task id="l-{{task.id}}">
 				</li>
 			</ul>

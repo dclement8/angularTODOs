@@ -9,9 +9,9 @@ angular.module("liste")
 				{
 					scope.task.done();
 				},
-				scope.modif = function()
+				scope.modifTask = function()
 				{
-					scope.task.modif();
+					scope.task.modifTask();
 				}
 			}
 		};

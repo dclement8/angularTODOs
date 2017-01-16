@@ -9,7 +9,7 @@ angular.module("liste").service("Liste",
 				this.todos = [];
 			}
 			
-			Liste.prototype.show = function()
+			/*Liste.prototype.show = function()
 			{
 				var tasks = [];
 				
@@ -21,14 +21,13 @@ angular.module("liste").service("Liste",
 						tasks.push(newTache);
 					});
 					
-					this.todos = tasks;
-					thisListe = this;
+					listeTodos = tasks;
 					
 				},function(error)
 				{
 					console.log(error);
 				});
-			}
+			}*/
 			
 			Liste.prototype.modif = function()
 			{
