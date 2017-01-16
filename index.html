@@ -19,9 +19,9 @@
 	</head>
 	<body ng-app="liste" ng-controller="ListeController">
 		<h1>TODOS</h1>
-		<div id="container">
+		<div id="container" ng-controller="ListeController">
 			<div class="row">
-				<div id="MainboxItem" class="col-sm-4 col-md-4" ng-controller="ListeController">
+				<div id="MainboxItem" class="col-sm-4 col-md-4">
 					<h2 class="titre">Liste des tâches</h2>
 					<div class="form-inline">
 						<input type="text" placeholder="Nom de la liste" class="form-control" id="liste-createbox" /> <button class="btn btn-primary" ng-click="create()">Créer la liste</button>
@@ -33,7 +33,7 @@
 					</ul>
 				</div>
 
-				<div id="boxItem" class="col-sm-8 col-md-8" ng-controller="TacheController">
+				<div id="boxItem" class="col-sm-8 col-md-8">
 					<h2 class="titre">Tâches {{laListe.label}}</h2>
 					<div class="form-inline">
 						<input type="text" placeholder="Nom de la tâche" class="form-control" id="tache-createbox" /> <button class="btn btn-primary" ng-click="createTask()">Créer une tâche</button>
